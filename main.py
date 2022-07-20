@@ -4,17 +4,12 @@ import pandas as pd
 while 1 == 1:
     # roll d8 d4 times, re-roll duplicates
     d4_roll = random.randint(1, 4)
-    d8_rolls = []
-    for x in range(d4_roll):
-        while len(d8_rolls) < d4_roll:
-            y = random.randint(1, 8)
-            if y not in d8_rolls:
-                d8_rolls.append(y)
+    d8_rolls = random.sample((1, 8), d4_roll)
     d8_rolls.sort()
     # read table .csv, loop through each table needed rolling the d20
     results = []
     df = pd.read_csv('randomMonster.csv')
-    r_rolls = []
+    # r_rolls = []
     for x in d8_rolls:
         if x == 1:
             y = random.randint(1, 12)
@@ -24,7 +19,7 @@ while 1 == 1:
             y = random.randint(1, 10)
         else:
             y = random.randint(1, 20)
-        r_rolls.append(y)
+        # r_rolls.append(y)
         data = df.iloc[y - 1, x - 1]
         results.append(data)
     # Test rolls
@@ -56,4 +51,4 @@ while 1 == 1:
         print("form = ", form)
     print("\n")
     input("Press enter to generate another...")
-    print("\n")
+
