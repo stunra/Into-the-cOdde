@@ -2,9 +2,11 @@
 Randomizers and stuff for Into the Odd
 
 Tables Available:
+
 Random Monsters from Into the Dungeon Revised
 
 For Windows users:
+
 Download the dist folder files
 Run the .exe
 Hit enter to generate monsters
