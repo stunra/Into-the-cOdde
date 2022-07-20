@@ -1,5 +1,5 @@
 # Into-the-cOdde
-Randomizers and stuff for Into the Odd
+Randomizers and stuff for Into the Odd-verse games
 
 Tables Available:
 
