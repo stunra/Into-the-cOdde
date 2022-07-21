@@ -4,7 +4,7 @@ import pandas as pd
 while 1 == 1:
     # roll d8 d4 times, re-roll duplicates
     d4_roll = random.randint(1, 4)
-    d8_rolls = random.sample((1, 8), d4_roll)
+    d8_rolls = random.sample(range(1, 8), d4_roll)
     d8_rolls.sort()
     # read table .csv, loop through each table needed rolling the d20
     results = []
